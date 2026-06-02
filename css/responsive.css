@@ -1,0 +1,165 @@
+/* ========= Responsive ========= */
+@media (max-width:1024px){
+  .search-form{width:200px}
+}
+@media (max-width:860px){
+  .nav-desktop{display:none}
+  .menu-toggle{display:block}
+  .bottom-nav{display:flex}
+  body{padding-bottom:var(--bottom-h)}
+  .search-form{width:160px}
+  .hero{height:240px}
+  .hero-slide h3{font-size:18px}
+  .detail-banner{height:200px;margin-bottom:-60px}
+  .detail-poster{flex:0 0 140px}
+  .detail-info{padding-top:50px}
+  .detail-info h1{font-size:20px}
+}
+@media (max-width:560px){
+  :root{--header-h:60px}
+  .logo-text{font-size:14px}
+  .logo-text small{font-size:8px}
+  .search-form{display:none}
+  .grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .hero{height:200px;margin:0 12px 24px;border-radius:14px}
+  .hero-slide h3{font-size:16px}
+  .hero-slide .info{padding:14px}
+  .section-head h2{font-size:16px}
+  .card-title{font-size:12px;min-height:30px}
+  .hscroll .card{flex:0 0 130px}
+  .detail-head{flex-direction:column;align-items:center;text-align:center}
+  .detail-info{padding-top:20px}
+  .detail-genres{justify-content:center}
+  .detail-actions{justify-content:center}
+}
+@media (max-width:380px){
+  .grid{grid-template-columns:repeat(2,1fr);gap:8px}
+  .card-body{padding:8px}
+  .episode-list{grid-template-columns:repeat(auto-fill,minmax(90px,1fr))}
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01s!important;transition-duration:.01s!important}
+}
+
+/* =====================================================
+ LENZ NONTON V3 PREMIUM 2026
+ Non-destructive enhancement layer
+===================================================== */
+:root{
+ --primary:#7c4dff;
+ --secondary:#00d4ff;
+ --surface:rgba(255,255,255,.06);
+ --border:rgba(255,255,255,.08);
+}
+html{scroll-behavior:smooth}
+body{
+ background:
+ radial-gradient(circle at 0% 0%,rgba(124,77,255,.18),transparent 30%),
+ radial-gradient(circle at 100% 0%,rgba(0,212,255,.14),transparent 30%);
+}
+.hero-premium{
+ min-height:60vh;
+ border-radius:24px;
+ background:linear-gradient(135deg,rgba(124,77,255,.25),rgba(0,212,255,.15));
+ backdrop-filter:blur(20px);
+ margin-bottom:24px;
+}
+.card,.anime-card,.item,.box,.movie-card,.episode-card{
+ backdrop-filter:blur(18px)!important;
+ border:1px solid var(--border)!important;
+ transition:all .35s ease!important;
+ transform-style:preserve-3d;
+}
+.card:hover,.anime-card:hover,.item:hover,.box:hover{
+ transform:translateY(-8px) rotateX(2deg);
+ box-shadow:0 25px 50px rgba(124,77,255,.25);
+}
+img{transition:transform .4s ease}
+.card:hover img,.anime-card:hover img{transform:scale(1.05)}
+.trending-badge,.hot,.new,.badge{
+ background:linear-gradient(135deg,var(--primary),var(--secondary))!important;
+}
+.premium-section-title{
+ display:flex;align-items:center;gap:10px;
+ margin:24px 0;
+}
+.premium-section-title:before{
+ content:'';width:5px;height:24px;
+ border-radius:20px;
+ background:linear-gradient(var(--primary),var(--secondary));
+}
+.skeleton{
+ background:linear-gradient(90deg,#222,#333,#222);
+ background-size:200% 100%;
+ animation:skeleton 1.5s infinite;
+}
+@keyframes skeleton{
+ 0%{background-position:200% 0}
+ 100%{background-position:-200% 0}
+}
+#backToTop,#floatingAction{
+ position:fixed;right:20px;
+ width:52px;height:52px;border:none;
+ border-radius:50%;z-index:9999;
+ background:linear-gradient(135deg,var(--primary),var(--secondary));
+ cursor:pointer;
+}
+#backToTop{bottom:20px;display:none}
+#floatingAction{bottom:85px}
+
+
+/* ===============================
+   LENZ NONTON V4 PREMIUM 2026
+   Safe UI Enhancement Layer
+================================ */
+
+:root{
+ --v4-primary:#7c4dff;
+ --v4-cyan:#00d4ff;
+}
+
+.header,.navbar,nav{
+ backdrop-filter:blur(20px);
+}
+
+.hero-cinematic{
+ min-height:70vh;
+ border-radius:28px;
+ background:
+ linear-gradient(135deg,rgba(124,77,255,.25),rgba(0,212,255,.12));
+ overflow:hidden;
+ position:relative;
+}
+
+.hero-cinematic::before{
+ content:'';
+ position:absolute;
+ inset:0;
+ background:radial-gradient(circle at center,rgba(255,255,255,.08),transparent 60%);
+}
+
+.card,.anime-card,.movie-card,.episode-card{
+ border-radius:20px !important;
+ overflow:hidden;
+}
+
+.card:hover,.anime-card:hover,.movie-card:hover{
+ transform:translateY(-8px) rotateX(2deg) scale(1.01);
+}
+
+.rating-premium{
+ padding:6px 10px;
+ border-radius:999px;
+ background:linear-gradient(135deg,var(--v4-primary),var(--v4-cyan));
+}
+
+.trending-banner{
+ border-radius:24px;
+ backdrop-filter:blur(18px);
+}
+
+@media(max-width:768px){
+ .hero-cinematic{min-height:45vh;}
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+<meta name="theme-color" content="#0f1117">
+<title>LENZ ANIME NONTON - Streaming Anime Subtitle Indonesia</title>
+<meta name="description" content="LENZ ANIME NONTON adalah platform streaming anime modern dengan update anime ongoing, completed, jadwal anime, genre lengkap, pencarian cepat, dan pengalaman menonton yang nyaman.">
+<meta name="keywords" content="nonton anime, streaming anime, anime sub indo, anime ongoing, anime completed, jadwal anime, lenz anime">
+<meta name="author" content="LENZ ANIME NONTON">
+<meta name="robots" content="index,follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="LENZ ANIME NONTON">
+<meta property="og:description" content="Streaming Anime Subtitle Indonesia">
+<meta property="og:image" content="./assets/logo.png">
+<meta property="og:site_name" content="LENZ ANIME NONTON">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LENZ ANIME NONTON">
+<meta name="twitter:description" content="Streaming Anime Subtitle Indonesia">
+<meta name="twitter:image" content="./assets/logo.png">
+
+<link rel="canonical" href="/">
+<link rel="icon" href="./assets/favicon.ico">
+<link rel="manifest" href="./manifest.json">
+<link rel="preconnect" href="https://shivraapi.my.id">
+<link rel="preconnect" href="https://api.jikan.moe">
+
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="./css/responsive.css">
+
+<!-- Schema.org -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "LENZ ANIME NONTON",
+  "url": "/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "/#/search?q={query}",
+    "query-input": "required name=query"
+  }
+}
+</script>
+</head>
+<body>
+
+<!-- Loading Screen -->
+<div id="loading-screen" class="loading-screen">
+  <div class="loading-logo">LENZ</div>
+  <div class="loading-text">Memuat Dunia Anime...</div>
+  <div class="loading-bar"><span></span></div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="container header-inner">
+    <a href="#/" class="logo" aria-label="LENZ ANIME NONTON">
+      <span class="logo-mark">L</span>
+      <span class="logo-text">LENZ <small>ANIME NONTON</small></span>
+    </a>
+    <nav class="nav-desktop" aria-label="Main">
+      <a href="#/">Home</a>
+      <a href="#/ongoing">Ongoing</a>
+      <a href="#/completed">Completed</a>
+      <a href="#/schedule">Schedule</a>
+      <a href="#/genres">Genres</a>
+      <a href="#/list">Anime List</a>
+      <a href="#/favorites">Favorit</a>
+    </nav>
+    <form class="search-form" id="search-form" role="search">
+      <input type="search" id="search-input" placeholder="Cari anime..." autocomplete="off" aria-label="Cari anime">
+      <button type="submit" aria-label="Cari">🔍</button>
+      <div class="search-suggest" id="search-suggest" hidden></div>
+    </form>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<!-- Mobile Drawer -->
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <nav>
+    <a href="#/">🏠 Home</a>
+    <a href="#/ongoing">🔥 Ongoing</a>
+    <a href="#/completed">✅ Completed</a>
+    <a href="#/schedule">📅 Schedule</a>
+    <a href="#/genres">🎭 Genres</a>
+    <a href="#/list">📚 Anime List</a>
+    <a href="#/favorites">❤️ Favorit</a>
+    <a href="#/search">🔍 Search</a>
+  </nav>
+</aside>
+<div class="drawer-backdrop" id="drawer-backdrop"></div>
+
+<!-- Main Content -->
+<main id="app" class="main"></main>
+
+<!-- Bottom Nav (Mobile) -->
+<nav class="bottom-nav" aria-label="Bottom">
+  <a href="#/" data-route="/">🏠<span>Home</span></a>
+  <a href="#/ongoing" data-route="/ongoing">🔥<span>Ongoing</span></a>
+  <a href="#/search" data-route="/search">🔍<span>Search</span></a>
+  <a href="#/genres" data-route="/genres">🎭<span>Genre</span></a>
+  <a href="#/list" data-route="/list">📚<span>List</span></a>
+</nav>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">LENZ ANIME NONTON</div>
+    <p>Streaming Anime Subtitle Indonesia</p>
+    <p class="footer-meta">© 2026 LENZ ANIME NONTON · Powered by Lenz API &amp; Jikan API</p>
+  </div>
+</footer>
+
+<!-- Toast -->
+<div id="toast" class="toast" hidden></div>
+
+<!-- Scripts (modular order) -->
+<script src="./js/config.js"></script>
+<script src="./js/cache.js"></script>
+<script src="./js/error-handler.js"></script>
+<script src="./js/api.js"></script>
+<script src="./js/image-loader.js"></script>
+<script src="./js/ui.js"></script>
+<script src="./js/player.js"></script>
+<script src="./js/router.js"></script>
+<script src="./pages/home.js"></script>
+<script src="./pages/ongoing.js"></script>
+<script src="./pages/completed.js"></script>
+<script src="./pages/anime.js"></script>
+<script src="./pages/episode.js"></script>
+<script src="./pages/batch.js"></script>
+<script src="./pages/genre.js"></script>
+<script src="./pages/search.js"></script>
+<script src="./pages/schedule.js"></script>
+<script src="./pages/list.js"></script>
+<script src="./js/app.js"></script>
+
+<div id="premium-toast" style="position:fixed;top:20px;right:20px;z-index:99999;display:none;padding:12px 16px;border-radius:12px;background:rgba(20,20,30,.9);backdrop-filter:blur(10px)">Welcome to LENZ Premium</div>
+<button id="floatingAction">★</button>
+<button id="backToTop">↑</button>
+
+<script>
+(function(){
+const topBtn=document.getElementById('backToTop');
+window.addEventListener('scroll',()=>{
+if(topBtn) topBtn.style.display=window.scrollY>300?'block':'none';
+});
+if(topBtn) topBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+
+const toast=document.getElementById('premium-toast');
+if(toast){
+ setTimeout(()=>{toast.style.display='block';},800);
+ setTimeout(()=>{toast.style.display='none';},3500);
+}
+
+const observer=new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.animate([
+{opacity:0,transform:'translateY(24px)'},
+{opacity:1,transform:'translateY(0)'}
+],{duration:600,fill:'forwards'});
+}
+});
+});
+document.querySelectorAll('.card,.anime-card,.item,.box,.movie-card').forEach(el=>observer.observe(el));
+})();
+</script>
+
+
+<script>
+(function(){
+
+/* navbar scroll effect */
+const nav=document.querySelector('header,.header,.navbar');
+if(nav){
+window.addEventListener('scroll',()=>{
+ if(window.scrollY>50){
+   nav.style.backdropFilter='blur(24px)';
+   nav.style.background='rgba(10,10,20,.82)';
+ }
+});
+}
+
+/* premium loading bar */
+const bar=document.createElement('div');
+bar.style.cssText='position:fixed;top:0;left:0;height:3px;width:0;z-index:999999;background:linear-gradient(90deg,#7c4dff,#00d4ff)';
+document.body.appendChild(bar);
+
+let p=0;
+const t=setInterval(()=>{
+ p+=10;
+ bar.style.width=p+'%';
+ if(p>=100){
+   clearInterval(t);
+   setTimeout(()=>bar.remove(),300);
+ }
+},80);
+
+})();
+</script>
+
+
+<script src="./js/v51-addon.js"></script>
+
+<script src="./js/v55-addon.js"></script>
+<script src="./js/favorites.js"></script>
+</body>
+</html>
